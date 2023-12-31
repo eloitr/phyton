@@ -8,9 +8,9 @@ posponer=0.1
 
 #conf window
 wn = turtle.Screen()
-wn.title("Juego de Eloi")
-wn.bgcolor("black")
-wn.setup(width=600, height=600)
+wn.title("Juego de Jordi")
+wn.bgcolor("blue")
+wn.setup(width=1200, height=800)
 wn.tracer(0)
 
 #Cap de la serp
@@ -63,16 +63,16 @@ texto.goto(0,350)
 def mov():
     if cabeza_direction == "up":
         y = cabeza.ycor()
-        cabeza.sety(y+20)
+        cabeza.sety(y+40)
     if cabeza_direction == "down":
         y = cabeza.ycor()
-        cabeza.sety(y-20)  
+        cabeza.sety(y-40)  
     if cabeza_direction == "left":
         x = cabeza.xcor()
-        cabeza.setx(x-20)   
+        cabeza.setx(x-40)   
     if cabeza_direction == "right":
         x = cabeza.xcor()
-        cabeza.setx(x+20) 
+        cabeza.setx(x+40) 
 
 def ir_up():
     global cabeza_direction
