@@ -14,9 +14,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from ctypes.wintypes import HMODULE
 from django.contrib import admin
 from django.urls import path
-from Proyecto1.views import saludo, despedida, contenido
+from Proyecto1.views import saludo, despedida, contenido, dame_hora, calculaEdad
 
 
 urlpatterns = [
@@ -24,4 +25,6 @@ urlpatterns = [
     path('saludo/', saludo),
     path('nosveremos/', despedida),
     path('contenido/', contenido),
+    path('hora/', dame_hora),
+    path('edades/<int:edad>/<int:agno>', calculaEdad)
     ]
