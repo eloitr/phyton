@@ -17,6 +17,7 @@ EJERCICIO:
 ### ESTRUCTURAS DE DATOS ###
 
 #LISTAS:
+#Inserción
 my_list = list(["dias", "Buenos", "dias"])
 print(my_list)
 print(my_list[0])
@@ -27,6 +28,7 @@ print(my_second_list)
 my_list.append(15)
 print(my_list)
 
+#Borrado
 my_second_list.insert(0, "Hola")
 print(my_second_list)
 
