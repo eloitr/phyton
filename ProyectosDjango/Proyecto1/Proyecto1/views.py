@@ -8,6 +8,7 @@ class Persona(object):
         
         self.nombre = nombre
         self.apellido=apellido
+    
         
 
 def saludo(request): #primera vista
