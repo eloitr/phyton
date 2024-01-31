@@ -2,6 +2,7 @@ import datetime
 
 from django.http import HttpResponse
 from django.template import Template, Context
+import random
 
 class Persona(object):
     def __init__(self, nombre, apellido):
@@ -13,13 +14,14 @@ class Persona(object):
 
 def saludo(request): #primera vista
     p1=Persona("Eloi", "Traver")
+    numero = random.randrange(100)
     #nombre = "Eloi"
     #apellido = "Traver"
     ahora = datetime.datetime.now()
     doc_externo = open("C:/Users/eloit/phyton/ProyectosDjango/Proyecto1/Proyecto1/plantillas/mi_plantilla.html")
     plt=Template(doc_externo.read())
     doc_externo.close()
-    ctx=Context({"nombre_persona":p1.nombre, "apellido_persona":p1.apellido, "momento_actual":ahora})
+    ctx=Context({"nombre_persona":p1.nombre, "apellido_persona":p1.apellido, "momento_actual":ahora, "numero_aleatorio":numero})
     
     documento = plt.render(ctx)
     
