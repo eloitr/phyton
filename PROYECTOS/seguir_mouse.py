@@ -11,10 +11,10 @@ wn.setup(width=600, height=600)
 
 t = turtle.Turtle()
 t.speed(-1)
-t.penup()
+# ! t.penup()
 
 
-t.ondrag(dragging)
+wn.onclick(dragging)
     
     
 wn.mainloop()

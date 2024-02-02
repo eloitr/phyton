@@ -40,6 +40,36 @@ text_oportunitats = ttk.Button(
     )
 text_oportunitats.place(x=350, y=50) 
 
-
-
+def debilitats():
+    debilitats = tk.Toplevel()
+    debilitats.title("DEBILITATS")
+    debilitats.config(width=500, height=500)
+    text_debilitats = tk.Label(
+        debilitats,
+        text = ""
+    )
+    text_debilitats.place(x=0, y=0)
+text_debilitats = ttk.Button(
+    ventana_principal,
+    text = "DEBILITATS",
+    command=debilitats
+    )
+text_debilitats.place(x=350, y=80)
+"""
+def debilitats():
+    debilitats = tk.Toplevel()
+    debilitats.title("DEBILITATS")
+    debilitats.config(width=500, height=500)
+    text_debilitats = tk.Label(
+        debilitats,
+        text = ""
+    )
+    text_debilitats.place(x=0, y=0)
+text_debilitats = ttk.Button(
+    ventana_principal,
+    text = "DEBILITATS",
+    command=debilitats
+    )
+text_oportunitats.place(x=350, y=50)
+"""
 ventana_principal.mainloop()
