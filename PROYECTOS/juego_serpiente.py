@@ -101,10 +101,10 @@ def ir_right():
     
     
 wn.listen()
-wn.onkeypress(ir_up, "w")  
-wn.onkeypress(ir_down, "s") 
-wn.onkeypress(ir_left, "a") 
-wn.onkeypress(ir_right, "d")      
+wn.onkeypress(ir_up, "Up")  
+wn.onkeypress(ir_down, "Down") 
+wn.onkeypress(ir_left, "Left") 
+wn.onkeypress(ir_right, "Right")      
 
 while True: 
     wn.update()
