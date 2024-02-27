@@ -2,7 +2,7 @@ import random
  
 while True:
     vocabulari = {"zip": "cremallera", "brand":"marca", "clothing":"vestimenta", "compliment":"cumplido", "deliver":"entregar", "frames":"marcs", "glamorous":"glamurós", 
-                  "hoodie":"dessuadora amb caputxa", "sleeve":"màniga", "sleeveless":"sense màniga", "stylish":"elegant", "suit":"quedar bé", "swap":"intercanviar", "layer":"capes", "plain":"pla" or "llis", "price tag":"etiqueta",
+                "hoodie":"dessuadora amb caputxa", "sleeve":"màniga", "sleeveless":"sense màniga", "stylish":"elegant", "suit":"quedar bé", "swap":"intercanviar", "layer":"capes", "plain":"pla" or "llis", "price tag":"etiqueta",
                   "range":"rango", "ripped":"estripat", "assess":"evaluar", "cheat":"fer trampes", "daydream":"estar als núvols", "draw a conclusion":"arribar a la conclusió", "figure out":"desxifrar" or "resoldre", "focus":"concentrar-se en", "gamble":"apostar",
                   "make an effort":"fer un esforç", "read someone's mind":"llegir la ment a algú", "recall":"recordar", "recognise":"recordar", "remind":"recordar a algú", "suspect":"sospitar", "take turns":"fer torns", "think over":"reflexionar", "":"",
                   "airline":"aerolínea", "board":"embarcar", "check in":"facturar", "crew":"tripulació", "delay":"retard", "fabulous":"fabulós", "flight attendant":"assafata" or "assistenta de vol", "full board":"pensió completa", "gate":"porta",
