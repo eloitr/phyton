@@ -1,18 +1,32 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.action_chains import ActionChains    
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
-
+import time
+from selenium.webdriver.common.keys import Keys
 from time import sleep
 
-opt = Options()
-opt.binary_location = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"  # Remove extra quotes
-opt.add_argument("--incognito")
-"""
-driver = webdriver.Chrome(
-    ChromeDriverManager().install(),
-    options=opt 
-    )
-    """ # --> options=opt dona error 
-#driver.get("https://www.instagram.com")
-sleep(3)
+
+driver = webdriver.Chrome()
+
+def login (driver):
+    driver.get('https://www.instagram.com/accounts/login/')
+    sleep(1)
+    login_button = driver.find_element(By.NAME, "username")
+    login_button.clear()
+    login_button.send_keys("eloitraver2@gmail.com")
+    login_button.clear()
+    sleep(0.3)
+    login_button = driver.find_element(By.NAME, "password")
+    login_button.clear()
+    login_button.send_keys("123456789Hola")
+    login_button.clear()
+    sleep(0.3)
+    login_button.send_keys(Keys.RETURN)
+    login_button.clear()
+    sleep(20)
+    
+
+login (driver)
+
+
