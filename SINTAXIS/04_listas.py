@@ -35,7 +35,7 @@ print(my_other_list)
 my_other_list.insert(0, "blue")
 print(my_other_list)
 
-my_other_list[0] = "Rojo" #Para cambiar alores
+my_other_list[0] = "Rojo" #Para cambiar valores
 print(my_other_list)
 
 
