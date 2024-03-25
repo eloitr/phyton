@@ -1,31 +1,49 @@
 import datetime
 
 from django.http import HttpResponse
-from django.template import Template, Context
+#from django.template import Template, Context --> haciendo sin importar el dir a settings, ver curso pílsoras 1-8
 import random
-
-class Persona(object):
+#from django.template.loader import get_template --> para utilizar la simplificació del vídeo 8
+from django.shortcuts import render
+class Persona():#object
     def __init__(self, nombre, apellido):
         
         self.nombre = nombre
-        self.apellido=apellido
+        self.apellido = apellido
     
         
 
 def saludo(request): #primera vista
-    p1=Persona("Eloi", "Traver")
+    p1=Persona("Terròs", "Traver")
     numero = random.randrange(100)
     #nombre = "Eloi"
     #apellido = "Traver"
+    temas_del_curso = ["Plantillas", "Modelos", "Formularios", "Vistas", "Despliegue de la aplicación"]#"Plantillas", "Modelos", "Formularios", "Vistas", "Despliegue de la aplicación"
     ahora = datetime.datetime.now()
-    doc_externo = open("C:/Users/eloit/phyton/ProyectosDjango/Proyecto1/Proyecto1/plantillas/mi_plantilla.html")
-    plt=Template(doc_externo.read())
-    doc_externo.close()
-    ctx=Context({"nombre_persona":p1.nombre, "apellido_persona":p1.apellido, "momento_actual":ahora, "numero_aleatorio":numero})
-    
-    documento = plt.render(ctx)
-    
-    return HttpResponse(documento)
+
+    return render(request, 'mi_plantilla.html', {
+                "nombre_persona":p1.nombre, 
+                "apellido_persona":p1.apellido,
+                "momento_actual":ahora,
+                "numero_aleatorio":numero,
+                "temas":temas_del_curso})
+
+def f1(request):
+    ahora = datetime.datetime.now()
+
+    return render(request, 'f1.html', {"momento_actual":ahora})
+
+def troll(request):
+    ahora = datetime.datetime.now()
+
+    return render(request, 'troll.html', {"momento_actual":ahora})
+
+
+
+
+
+
+
 
 
 def despedida(request):

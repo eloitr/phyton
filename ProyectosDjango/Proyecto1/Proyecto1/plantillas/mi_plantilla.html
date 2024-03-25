@@ -1,27 +1,33 @@
 <html>
     <head>
-        <h1>
-            Mi web:
-        </h1>
+        {% include 'superior/barra.html' %}
+        <h1>    Mi web:    </h1>
+            {% if nombre_persona == 'Eloi' %}
+                <p> El alumno se llama Eloi</p>
+            {%else%}
+                <p> El curso lo imparte {{nombre_persona}} {{apellido_persona}}</p>
+            {% endif %}
     </head>
-    <body>
-        <h2 style="color:rgba(0, 255, 64, 0.959)">
-            Hola!este  es mi primera plantilla
-        </h2>
+        <body>    
+            <h2 style="color:rgba(0, 255, 64, 0.959)">        Hola!este  es mi primera plantilla    </h2>
+    
+            <p style="color:rgba(0, 26, 255, 0.959)">    -   El nombre del profesor es {{nombre_persona|lower}} {{apellido_persona.upper}}</p>
 
-        <p style="color:rgba(0, 26, 255, 0.959)">
-            -   El nombre del profesor es {{nombre_persona}} {{apellido_persona}}
-        </p>
+            <p style="color:rgba(0, 26, 255, 0.959)">    - D&iacute;a: {{momento_actual.day}} / {{momento_actual.month}} / {{momento_actual.year}} </p> 
 
-        <p style="color:rgba(0, 26, 255, 0.959)">
-            - D&iacute;a: {{momento_actual.day}} / {{momento_actual.month}} / {{momento_actual.year}} 
-        </p> <!decir solo el día>
-
-        <p style="color:rgba(0, 26, 255, 0.959)">
-            - Hora: {{momento_actual.hour}}:{{momento_actual.minute}}:{{momento_actual.second}}
-        </p>
-        <a href="localhost:8000/hora/">Hora espec&iacute;fica</a>
-        <img src="file:///C:/Users/eloit/Downloads/ClubImagenes-hola_009.jpg" alt ="Interpretación artistica  de un hello" style="width: 400; height: 400">
-        <p>Numero aleatorio: {{numero_aleatorio}}</p>
-    </body>
-    </html>
+            <p style="color:rgba(0, 26, 255, 0.959)">    - Hora: {{momento_actual.hour}}:{{momento_actual.minute}}:{{momento_actual.second}}</p>
+        
+            <p><strong>Temas del curso:</strong></p> 
+                <p>
+                    <ul> <!lista html>
+                    {% if temas %}
+                        {% for i in temas %}
+                            <li>{{i|first|lower}}</li> <!elemento de la lista html>
+                        {% endfor %}
+                    {% else %}
+                        <p>No hay elementos que mostrar</p>
+                    {% endif %}
+                </ul>
+                </p>
+        </body>
+</html>
