@@ -184,7 +184,6 @@ while True:
             segmentos.clear()
             score = 0
             
-           
             
             
             

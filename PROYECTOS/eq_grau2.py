@@ -9,7 +9,7 @@ from math import sqrt
 
 
 ventana_principal = tk.Tk()
-ventana_principal.config(width=1000, height=500)
+ventana_principal.config(width=1500, height=1000)
 ventana_principal.title("Equacions de 2n grau")
 def cuadraticas ():
     a_valor = ttk.Label(
@@ -26,7 +26,7 @@ def cuadraticas ():
     c_valor.place(x=350, y=60) 
 
     def calcul_equacio():
- 
+
         a1 = float(caja_nombre_a.get())
         b1 = float(caja_nombre_b.get())
         c1 = float(caja_nombre_c.get())

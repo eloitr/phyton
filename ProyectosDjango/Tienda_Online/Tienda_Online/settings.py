@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Tienda_Online.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['D:\Eloit\phyton\ProyectosDjango\Tienda_Online\gestion_pedidos\Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'Tienda_Online.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'articulosclientes',
+        'USER': 'postgres',
+        'PASSWORD': 'Eloi06793411',
+        'HOST': '127.0.0.1',
+        'DATABASE_PORT':'5432',
     }
 }
 
@@ -104,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ca-eu'
 
 TIME_ZONE = 'UTC'
 
