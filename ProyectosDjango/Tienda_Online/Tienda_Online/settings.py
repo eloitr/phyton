@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Tienda_Online.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['D:\Eloit\phyton\ProyectosDjango\Tienda_Online\gestion_pedidos\Templates'],
+        'DIRS': ['D:/Eloit/phyton/ProyectosDjango/Tienda_Online/gestion_pedidos/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

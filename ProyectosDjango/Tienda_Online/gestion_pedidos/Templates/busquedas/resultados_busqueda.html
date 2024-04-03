@@ -1,0 +1,26 @@
+
+{%extends 'pie\cabeza/base.html'%}
+
+    {% block title %}Resultados de la Búsqueda{% endblock %}
+
+{% block content %}
+    <p>
+        Elemento buscado: <strong>{{query}}</strong>
+    </p>
+    <p>
+        Artículos encontrados (en la BBDD): {{articulos}}
+    </p>
+    <ul>
+        {% for articulo in articulos_view %}
+            <li>
+                
+                NOMBRE: <strong>{{articulo.nombre|upper}}</strong>, SECCIÓN: <strong>{{articulo.seccion|upper}}</strong>, PRECIO: <strong>{{articulo.precio}}€</strong>
+                
+            </li>
+        {% endfor %}
+    </ul>
+    <form action="/busqueda_productos/">
+        <input type="submit" value="volver">
+    </form>
+
+{% endblock %}

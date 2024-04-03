@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from gestion_pedidos.models import Articulos
 
 def busqueda_productos(request):
-    return render(request, "busqueda_productos.html")
+    return render(request, "busquedas/busqueda_productos.html")
 
 def buscar(request):  
     producto=request.GET["producto"]
@@ -13,10 +13,10 @@ def buscar(request):
         if articulos:
             art=len(articulos)
             articulos_view=articulos
-            return render(request, "resultados_busqueda.html", {"articulos":art, "query":producto, "articulos_view":articulos_view})
+            return render(request, "busquedas/resultados_busqueda.html", {"articulos":art, "query":producto, "articulos_view":articulos_view})
         else:
             art=0
-            return render(request, "resultados_busqueda.html", {"articulos":art, "query":producto})
+            return render(request, "busquedas/resultados_busqueda.html", {"articulos":art, "query":producto})
     else:
         mensaje="No has introducido nada"    
     return HttpResponse(mensaje)
