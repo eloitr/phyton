@@ -150,8 +150,7 @@ wn.onkeypress(ir_right, "d")
 wn.onkeypress(ir_up_2, "Up")
 wn.onkeypress(ir_down_2, "Down")
 wn.onkeypress(ir_left_2, "Left")
-wn.onkeypress(ir_right_2, "Right")
-     
+wn.onkeypress(ir_right_2, "Right") 
 
 while True: 
     wn.update()
@@ -249,7 +248,7 @@ while True:
         y_2 = cabeza_2.ycor()
         segmentos_2[0].goto(x_2, y_2)
 
-       
+    
     
     linies.hideturtle()
     mov()
@@ -283,9 +282,6 @@ while True:
                 segmento_2.goto(5000, 5000)
             segmentos_2.clear()
             score_2 = 0
-           
-            
-            
             
             
     time.sleep(posponer)

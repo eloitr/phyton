@@ -90,8 +90,6 @@ def ir_left():
     global cabeza_direction
     if cabeza_direction != "right":
         cabeza_direction = "left"
-
-    
     
 def ir_right():
     global cabeza_direction
@@ -164,7 +162,7 @@ while True:
         segmentos[0].goto(x, y)
         
 
-       
+
     
     linies.hideturtle()
     mov()
