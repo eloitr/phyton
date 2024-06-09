@@ -18,25 +18,47 @@ cabeza.speed(0)
 cabeza.shape("square")
 cabeza.color("blue")
 cabeza.penup()
-cabeza.goto(-100, 0)
+cabeza.goto(0, 0)
 cabeza_direction ="stop"
 
 
 #texto
+
+class texto(self):
+    self.texto_1p
+
 texto_1p=turtle.Turtle()
 texto_1p.penup()
 texto_1p.speed(0)
 texto_1p.color("white")
 texto_1p.hideturtle()
-texto_1p.goto(100,0)
-arg=1
-texto_1p.write(f"{1} player", align ="center", font = ("Courier", 24, "normal"))
-def texto_cambiar():
-    texto_1p.clear()
-    texto_1p.write(f"{1} player", align ="center", font = ("Cursive", 30, "normal"))
-def texto_mantener():
-    texto_1p.clear()
-    texto_1p.write(f"{1} player", align ="center", font = ("Courier", 24, "normal"))
+texto_1p.goto(500,-100)
+texto_1p.write(
+'''
+    ______________________
+    |                    |
+    |                    |
+    |      1 player      |
+    |                    |
+    |____________________|
+    
+''', align ="center", font = ("Courier", 24, "normal"))
+texto_2p=turtle.Turtle()
+texto_2p.penup()
+texto_2p.speed(0)
+texto_2p.color("white")
+texto_2p.hideturtle()
+texto_2p.goto(-600,-100)
+texto_2p.write(
+'''
+    ______________________
+    |                    |
+    |                    |
+    |      2 player      |
+    |                    |
+    |____________________|
+    
+''', align ="center", font = ("Courier", 24, "normal"))
 def mov():
     if cabeza_direction == "up":
         y = cabeza.ycor()
@@ -74,8 +96,4 @@ wn.onkeypress(ir_right, "Right")
 while True:
     wn.update()
     mov()
-    if cabeza.distance(texto_1p)<50:
-        texto_cambiar()
-    else:
-        texto_mantener()
     time.sleep(posponer)
